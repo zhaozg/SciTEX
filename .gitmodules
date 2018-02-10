@@ -7,3 +7,12 @@
 [submodule "src/luajit"]
 	path = src/luajit
 	url = https://github.com/LuaJIT/LuaJIT.git
+[submodule "src/lua-compat-5.3"]
+	path = src/lua-compat-5.3
+	url = https://github.com/keplerproject/lua-compat-5.3.git
+[submodule "src/SciTEX/lfs"]
+	path = src/SciTEX/lfs
+	url = https://github.com/keplerproject/luafilesystem.git
+[submodule "src/SciTEX/lpeg"]
+	path = src/SciTEX/lpeg
+	url = https://github.com/zhaozg/lpeg.git
