@@ -1,0 +1,9 @@
+[submodule "src/scintilla"]
+	path = src/scintilla
+	url = https://github.com/mirror/scintilla.git
+[submodule "src/scite"]
+	path = src/scite
+	url = https://github.com/mirror/scite.git
+[submodule "src/luajit"]
+	path = src/luajit
+	url = https://github.com/LuaJIT/LuaJIT.git
