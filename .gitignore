@@ -1,7 +1,7 @@
 /win32/dist
-/User
 *.obj
 *.exp
 *.dll
 *.obj
 *.lib
+/misc

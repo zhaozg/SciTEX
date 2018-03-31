@@ -1,0 +1,2 @@
+template=<%\n	page = {}\n	page.content = '/ace/content/|.html'\n	include ('frame/template.lhtml')\n%>
+import html.abbrev

@@ -1,0 +1,1304 @@
+BooleanType (Integer)
+BytesType (Integer)
+DateType (Integer)
+DynamicType (Integer)
+ErrorType (Integer)
+ExternType (Integer)
+False (Boolean)
+IntegerType (Integer)
+ListType (Integer)
+ObjectType (Integer)
+ObjRefType (Integer)
+PointType (Integer)
+RealType (Integer)
+ScriptType (Integer)
+StringType (Integer)
+True (Boolean)
+Undefined (Undefined)
+UndefinedType (Integer)
+VoidType (Integer)
+DatatypeName(Integer typeNumber) : String
+Echo([Dynamic firstValue], ...) : Void
+EchoDebug([Dynamic firstValue], ...) : Void
+EchoError([Dynamic firstValue], ...) : Void
+EchoInfo([Dynamic firstValue], ...) : Void
+EchoStamp(Boolean enable) : Void
+EchoWarn([Dynamic firstValue], ...) : Void
+GetFeatures(Dynamic firstValue, [Boolean dummy]) : List
+IsDefined(Dynamic testValue) : Boolean
+IsError(Dynamic testValue, [Error compareValue]) : Boolean
+IsFeature(Dynamic object, Dynamic feature) : Boolean
+IsInvokable(Dynamic testValue) : Boolean
+IsNotError(Dynamic testValue, [Error compareValue]) :\n\tBoolean
+IsNotSet(Dynamic testValue) : Boolean
+IsObject(Dynamic testValue) : Boolean
+IsSet(Dynamic testValue) : Boolean
+IsUndefined(Dynamic testValue) : Boolean
+Length(Dynamic value) : Integer
+NParameters() : Integer
+Parameters([Integer whichArg]) : Dynamic
+Point(Integer hCoord, Integer vCoord) : Point
+PointH(Point somePoint) : Integer
+PointV(Point somePoint) : Integer
+Type(Dynamic testValue) : Integer
+Assoc.AssocType (Integer)
+Assoc.Copy(Assoc src) : Assoc
+Assoc.CreateAssoc([Dynamic value]) : Assoc
+Assoc.Delete(Assoc a, Dynamic key) : Dynamic
+Assoc.FromRecord(Record rec) : Assoc
+Assoc.IsKey(Assoc a, Dynamic key) : Boolean
+Assoc.Items(Assoc a) : List
+Assoc.Keys(Assoc a) : List
+Assoc.Merge(Assoc assoc1, Assoc assoc2) : Assoc
+Assoc.NotSetValue() : NotSet
+Assoc.ToRecord(Assoc a) : Record
+Assoc.UndefinedValue(Assoc a, [Dynamic value]) : Dynamic
+CacheTree.CacheTreeType (Integer)
+CacheTree.Add(CacheTree tree, Integer childKey, Integer parentKey,\n\tDynamic childData) : Boolean
+CacheTree.Create() : CacheTree
+CacheTree.Get(CacheTree tree, Integer key) : Dynamic
+CacheTree.IsAncestor(Dynamic tree, Integer key, Integer testParentKey,\n\tInteger testChildKey) : Boolean
+CacheTree.IsDescendant(Dynamic tree, Integer key, Integer testParentKey,\n\tInteger testChildKey) : Boolean
+CacheTree.Parent(CacheTree tree, Integer key) : Integer
+CacheTree.Set(CacheTree tree, Integer key, Dynamic data) : Boolean
+CAPI.COMMIT (Integer)
+CAPI.CT_DBLIB (Integer)
+CAPI.CT_ODBC (Integer)
+CAPI.CT_ORACLE (Integer)
+CAPI.ERR_CLEAR (Integer)
+CAPI.ERR_KEEP (Integer)
+CAPI.CAPI_LOG_APPEND (Integer)
+CAPI.CAPI_LOG_TRUNCATE (Integer)
+CAPI.CAPI_PROXY_NONE (Integer)
+CAPI.CAPI_PROXY_WAPI (Integer)
+CAPI.ROLLBACK (Error)
+CAPI.AllocConnect(Integer type, String server, String database,\n\tString user, String password, CAPILOG log, CAPIERR err,\n\tInteger ctflags) : CAPICONNECT
+CAPI.AllocErr() : CAPIERR
+CAPI.AllocLog(String logFilePath, Integer openModeFlag) :\n\tCAPILOG
+CAPI.AttachLog(String loggerName, [String logFilePath = '', Integer\n\topenModeFlag = CAPI.LOG_TRUNCATE]) : CAPILOG
+CAPI.AllocLogin(CAPICONNECT connection, String username, String\n\tpassword, [String spaceName = '']) : CAPILOGIN
+CAPI.CheckRight(CAPILOGIN login, Integer rightID) : Integer
+CAPI.ClearErr(CAPIERR err) : Integer
+CAPI.ConnectionAttr(CAPICONNECT connection) : Assoc
+CAPI.ConnectionInfo([CAPICONNECT connect]) : RecArray
+CAPI.ContextData(Dynamic value, [Dynamic valueIn]) : Dynamic
+CAPI.Disconnect(CAPICONNECT connection) : Integer
+CAPI.EndTransaction(Dynamic connectionOrLogin, Dynamic\n\tcommitOrRollback) : Integer
+CAPI.ErrOption(CAPIERR err, Integer flag) : Integer
+CAPI.Exec(CAPICONNECT connection, String statement, [Dynamic sub]) :\n\tDynamic
+CAPI.ExecN(CAPICONNECT connection, String statement, RecArray\n\tvalues) : Dynamic
+CAPI.ExecSP(CAPICONNECT connection, String statement, [Dynamic sub])\n\t: Dynamic
+CAPI.GetDetailAt(CAPIERR err, Integer index) : String
+CAPI.GetErrAt(CAPIERR err, Integer index) : Error
+CAPI.IniDelete(CAPILOGIN login, [String section], [String keyword])\n\t: Integer
+CAPI.IniGet(CAPILOGIN login, String section, String keyword,\n\t[Dynamic dftValue]) : Dynamic
+CAPI.IniList(CAPILOGIN login, [String section], [String keyword]) :\n\tRecArray
+CAPI.IniPut(CAPILOGIN login, String section, String keyword,\n\t[Dynamic value]) : Integer
+CAPI.IsValid(CAPICONNECT connection) : Boolean
+CAPI.Log(CAPILOG log, String message) : Dynamic
+CAPI.LogError(CAPILOG log, String message) : Dynamic
+CAPI.LogInfo(CAPILOG log, String message) : Dynamic
+CAPI.LogWarn(CAPILOG log, String message) : Dynamic
+CAPI.LoginInfo([CAPILOGIN login]) : RecArray
+CAPI.Now(CAPICONNECT connect) : Date
+CAPI.NumErrs(CAPIERR error) : Integer
+CAPI.Parent(Dynamic value) : Dynamic
+CAPI.RestartTransaction(Dynamic connectOrLogin, Dynamic status) :\n\tInteger
+CAPI.RightsList(CAPILOGIN login, [Integer proxyType]) :\n\tRecArray
+CAPI.RightsSet(CAPILOGIN login) : Assoc
+CAPI.RightsString(CAPILOGIN login, String columnName) : String
+CAPI.StartTransaction(Dynamic connectOrLogin, [Integer numberOfIds])\n\t: Integer
+CAPI.TransactionDepth(Dynamic connectOrLogin) : Integer
+CAPI.UniqueID(Dynamic connectOrLogin, Integer unused, [Integer\n\tnumIds]) : Integer
+CAPI.UpdateRights(CAPILOGIN login) : Integer
+CAPI.UserID(CAPILOGIN login, [Integer userId]) : Integer
+CAPI.UseRightsString(CAPILOGIN login) : Boolean
+CAPI.UserInfo(CAPILOGIN login) : RecArray
+Compiler.E_CompilationErrors (Error)
+Compiler.kLogConversionInfo (Integer)
+Compiler.kStripSource (Integer)
+Compiler.ClearBreaks(Script theScript) : Script
+Compiler.Compile(Dynamic sourceValue, [String sourceRef]) : Script
+Compiler.CompileGeneral(Dynamic sourceValue, [String sourceRef],\n\t[Integer compilationFlags]) : List
+Compiler.GetBreakOnEntry(Script theScript) : Boolean
+Compiler.MakeScript(String source, [String sourceRef]) : Script
+Compiler.Prototype(Script theScript) : List
+Compiler.SetBreakOnEntry(Script theScript, Boolean setBreak) :\n\tScript
+Compiler.Source(Script theScript) : String
+Compiler.SourceRef(Script theScript) : String
+DAPI.ALIAS_NODE (Integer)
+DAPI.ALL_COLUMNS (Integer)
+DAPI.ATTR_DATE (Integer)
+DAPI.ATTR_FCHAR (Integer)
+DAPI.ATTR_INT (Integer)
+DAPI.ATTR_LCHAR (Integer)
+DAPI.ATTR_REAL (Integer)
+DAPI.ATTR_SET_ALL (Integer)
+DAPI.ATTR_SET_CAT (Integer)
+DAPI.ATTR_SET_SYS (Integer)
+DAPI.ATTR_VCHAR (Integer)
+DAPI.AuditEventADDVERSION (Integer)
+DAPI.AuditEventALIAS (Integer)
+DAPI.AuditEventATTRCHANGE (Integer)
+DAPI.AuditEventCDORDERED (Integer)
+DAPI.AuditEventCOPY (Integer)
+DAPI.AuditEventCREATE (Integer)
+DAPI.AuditEventCREATEGEN (Integer)
+DAPI.AuditEventCREATEREL (Integer)
+DAPI.AuditEventCREATEREND (Integer)
+DAPI.AuditEventCREATEREV (Integer)
+DAPI.AuditEventDELETE (Integer)
+DAPI.AuditEventDELREL (Integer)
+DAPI.AuditEventDELREND (Integer)
+DAPI.AuditEventDELREV (Integer)
+DAPI.AuditEventDELVERSION (Integer)
+DAPI.AuditEventFETCH (Integer)
+DAPI.AuditEventLOGIN (Integer)
+DAPI.AuditEventLOGOUT (Integer)
+DAPI.AuditEventMOVE (Integer)
+DAPI.AuditEventPERMCHANGE (Integer)
+DAPI.AuditEventPURGE (Integer)
+DAPI.AuditEventRENAME (Integer)
+DAPI.AuditEventRESERVE (Integer)
+DAPI.AuditEventUNRESERVE (Integer)
+DAPI.AuditSection (String)
+DAPI.BLK_READ (Integer)
+DAPI.BLK_WRITE (Integer)
+DAPI.BY_DATAID (Integer)
+DAPI.CANCEL (Integer)
+DAPI.CB_COPY_VERSION (Integer)
+DAPI.CB_FILTER_NODES (Integer)
+DAPI.CB_DELETE_VERSION (Integer)
+DAPI.CB_NEW_VERSION (Integer)
+DAPI.CB_UPDATE_NODE_USERID (Integer)
+DAPI.CLOSE (Integer)
+DAPI.COPY_A_NODE (Integer)
+DAPI.COPY_CURRENTV (Integer)
+DAPI.COPY_DST_CAT (Integer)
+DAPI.COPY_DST_PERMS (Integer)
+DAPI.COPY_DST_USERATTS (Integer)
+DAPI.COPY_NODE (Integer)
+DAPI.COPY_NO_CAT (Integer)
+DAPI.COPY_NO_USERATTS (Integer)
+DAPI.COPY_NO_VER (Integer)
+DAPI.COPY_PUBLISHEDV (Integer)
+DAPI.COPY_SET_CURRUSER (Integer)
+DAPI.COPY_SPECIFICV (Integer)
+DAPI.COPY_SRC_PERMS (Integer)
+DAPI.COPY_UNLOCKV (Integer)
+DAPI.COPY_UNRESERVE (Integer)
+DAPI.DATA_DELETE (Integer)
+DAPI.DATA_FETCH (Integer)
+DAPI.DATA_READ (Integer)
+DAPI.DATA_USER1 (Integer)
+DAPI.DATA_USER2 (Integer)
+DAPI.DATA_WRITE (Integer)
+DAPI.DELETE (Integer)
+DAPI.DELETE_NODE (Integer)
+DAPI.DELETE_NO_CHILD_COUNT_UPDATE (Integer)
+DAPI.DapiNodeType (Integer)
+DAPI.DapiSessionType (Integer)
+DAPI.DapiStreamType (Integer)
+DAPI.DapiVersionType (Integer)
+DAPI.ERROR (Integer)
+DAPI.FETCHABLE (Integer)
+DAPI.FILE_GET (Integer)
+DAPI.FILE_PUT (Integer)
+DAPI.FULL_PERM_MASK (Integer)
+DAPI.GENERATION_NODE (Integer)
+DAPI.LOCK_VERSION (Integer)
+DAPI.MOVE_NODE (Integer)
+DAPI.MOVE_ROOT_NODE (Integer)
+DAPI.MOVE_SUB_NODE (Integer)
+DAPI.NODE_ADD_CHILDREN (Integer)
+DAPI.NODE_CONTROL (Integer)
+DAPI.NODE_DELETE (Integer)
+DAPI.NODE_DEL_CHILDREN (Integer)
+DAPI.NODE_MODIFY_ATTR (Integer)
+DAPI.NODE_NODE (Integer)
+DAPI.NODE_NOT_RESERVED (Integer)
+DAPI.NODE_READ (Integer)
+DAPI.NODE_READ_EXPLICIT (Integer)
+DAPI.NODE_USER1 (Integer)
+DAPI.NODE_USER2 (Integer)
+DAPI.NOTIFY_ACL_ADD (Integer)
+DAPI.NOTIFY_ACL_DELETE (Integer)
+DAPI.NOTIFY_ACL_UPDATE (Integer)
+DAPI.NOTIFY_COPY (Integer)
+DAPI.NOTIFY_CREATE (Integer)
+DAPI.NOTIFY_CREATE_ROOT (Integer)
+DAPI.NOTIFY_DELETE (Integer)
+DAPI.NOTIFY_DELETE_VERSION (Integer)
+DAPI.NOTIFY_MOVE (Integer)
+DAPI.NOTIFY_RENAME (Integer)
+DAPI.NOTIFY_UPDATE (Integer)
+DAPI.OK (Integer)
+DAPI.OPEN_IN (Integer)
+DAPI.OPEN_OUT (Integer)
+DAPI.PERMTYPE_ACL (Integer)
+DAPI.PERMTYPE_GROUP (Integer)
+DAPI.PERMTYPE_SYSTEM (Integer)
+DAPI.PERMTYPE_USER (Integer)
+DAPI.PERMTYPE_WORLD (Integer)
+DAPI.PERM_DELETE (Integer)
+DAPI.PERM_SEE (Integer)
+DAPI.PERM_SEECONTENTS (Integer)
+DAPI.PERM_TO_RWD (Integer)
+DAPI.PERM_WRITE (Integer)
+DAPI.PLATFORM_MAC (Integer)
+DAPI.PLATFORM_MOTIF (Integer)
+DAPI.PLATFORM_UNKNOWN (Integer)
+DAPI.PLATFORM_WINDOWS (Integer)
+DAPI.RESERVE_NODE (Integer)
+DAPI.SEEK (Integer)
+DAPI.SKIP (Integer)
+DAPI.SYSTEM_COLUMNS (Integer)
+DAPI.UNUSED (Integer)
+DAPI.USER_COLUMNS (Integer)
+DAPI.VCOPY_ADDVER (Integer)
+DAPI.VCOPY_NO_USERATTS (Integer)
+DAPI.VCOPY_RENDITIONS (Integer)
+DAPI.VCOPY_UNLOCK (Integer)
+DAPI.VersionNotYetLoaded (Integer)
+DAPI.VERSION_CREATE_MAJOR (Integer)
+DAPI.VERSION_GET_CURRENT (Integer)
+DAPI.VERSION_GET_CURRENT_MAJOR (Integer)
+DAPI.VERSION_GET_CURRENT_PUBLISHED (Integer)
+DAPI.VERSION_NOT_LOCKED (Integer)
+DAPI.AddAttrToCategory(DAPISESSION session, String category, String\n\tattribute, Boolean optFlag) : Integer
+DAPI.AddCategory(DAPISESSION session, String category, String\n\tdisplayName, String tableName) : [Note]Integer
+DAPI.AddCategoryAttr(DAPISESSION session, String attribute, Integer\n\ttype, Integer length, [List extendList]) : Integer
+DAPI.AddNodeRight(DAPINODE node, Integer rightID, Integer\n\tpermissions) : Integer
+DAPI.AddNodeUserColumn(DAPISESSION sesssion, String columnName,\n\tString columnType) : Integer
+DAPI.AddProvider(DAPISESSION session, String provider, Boolean\n\tlogical, Dynamic script, [Dynamic object]) : Integer
+DAPI.AddRendition(DAPIVERSION version, DAPIVERSION rendition, String\n\tprovider, String localFilePath) : Integer
+DAPI.AddRenditionFromStream(DAPIVERSION version, String\n\trenditionType, String provider, Socket aSocket, Assoc\n\trenditionAttr) : Integer
+DAPI.AddValAsVersion(DAPINODE node, DAPIVERSION version, String\n\tprovider, Dynamic value) : Integer
+DAPI.AddVersion(DAPINODE node, DAPIVERSION version, String provider,\n\tString localFilePath) : Integer
+DAPI.AddVersionFromStream(DAPINODE node, DAPIVERSION version, String\n\tprovider, Socket aSocket, Assoc versionAttr) : Integer
+DAPI.AddVersionUserColumn(DAPISESSION session, String columnName,\n\tString columnType) : Integer
+DAPI.AliasNode(DAPINODE original, DAPINODE parent, DAPINODE new,\n\t[Boolean copyAcls]) : Integer
+DAPI.AllocNode(DAPISESSION session) : DAPINODE
+DAPI.AllocSession(CAPILOGIN login, [Boolean notifyChange]) :\n\tDAPISESSION
+DAPI.AllocVersion(DAPISESSION session) : DAPIVERSION
+DAPI.Audit(Dynamic nodeOrSession, String userEvent, String\n\tdescription) : Integer
+DAPI.MoveProviderData(DAPIVERSION version, String providerName) :\n\tInteger
+DAPI.CopyANode(DAPINODE original, DAPINODE parent, DAPINODE new,\n\t[Integer options], [Integer versionNum]) : Integer
+DAPI.CopyCategory(DAPINODE original, DAPINODE node) : Integer
+DAPI.CopyNode(DAPINODE original, DAPINODE parent, [Integer options],\n\t[Dynamic newNames]) : DAPINODE
+DAPI.CopyNodeUserAttrs(DAPINODE original, DAPINODE node) :\n\tInteger
+DAPI.CopyVersion(DAPIVERSION originalVersion, DAPINODE node,\n\tDAPIVERSION newVersion, [Integer options], [String provider])\n\t: Integer
+DAPI.CopyVersionUserAttrs(DAPIVERSION original, DAPIVERSION version)\n\t: Integer
+DAPI.CreateGeneration(DAPINODE original, DAPINODE parent, DAPINODE\n\tnew, [Boolean rootOnly], [Boolean copyAcls]) : Integer
+DAPI.CreateNode(DAPINODE new, DAPINODE parent, [Boolean copyAcls]) :\n\tInteger
+DAPI.CreateRootNode(DAPINODE new) : Integer
+DAPI.DelAttrFromCategory(DAPISESSION session, String category,\n\tString attribute) : Integer
+DAPI.DelCategory(DAPISESSION session, String category, Boolean\n\tdropTable) : Integer
+DAPI.DelCategoryAttr(DAPISESSION session, String attribute, [Boolean\n\tcheckUsage]) : Integer
+DAPI.DeleteNode(DAPINODE node, [Integer options]) : Integer
+DAPI.DeleteNodeRight(DAPINODE node, Integer rightID) : Integer
+DAPI.DeleteRendition(DAPIVERSION version, String renditionType) :\n\tInteger
+DAPI.DeleteVersion(DAPIVERSION version) : Integer
+DAPI.FetchRendition(DAPIVERSION version, String renditionType,\n\tString localFilePath) : Integer
+DAPI.FetchRenditionRangeToStream(DAPIVERSION version, Socket\n\taSocket, String renditionType, List rangeData) : Integer
+DAPI.FetchRenditionRangesToStream(DAPIVERSION version, Socket\n\taSocket, String renditionType, List rangesData, String\n\theaderData) : Integer
+DAPI.FetchRenditionToStream(DAPIVERSION version, Socket aSocket,\n\tString renditionType) : Integer
+DAPI.FetchVersion(DAPIVERSION version, String localFilePath) :\n\tInteger
+DAPI.FetchVersionAsVal(DAPIVERSION version) : Dynamic
+DAPI.FetchVersionRangeToStream(DAPIVERSION version, Socket aSocket,\n\tList rangeData) : Integer
+DAPI.FetchVersionRangesToStream(DAPIVERSION version, Socket aSocket,\n\tList rangesData, String headerData) : Integer
+DAPI.FetchVersionToStream(DAPIVERSION version, Socket aSocket) :\n\tInteger
+DAPI.GetMultilingualComment(DAPINODE node, String languageCode) :\n\tString
+DAPI.GetMultilingualName(DAPINODE node, String languageCode) :\n\tString
+DAPI.GetNode(String namePath, DAPINODE startNode, [Boolean\n\tautoExpand ]) : DAPINODE
+DAPI.GetNodeByID(DAPISESSION session, Integer volumeID/nodeID,\n\t[Integer nodeID], [Boolean autoExpand]) : DAPINODE
+DAPI.GetNodeColumnNames(DAPISESSION session, Integer columnType) :\n\tList
+DAPI.GetNodePermissions(DAPINODE node) : Integer
+DAPI.GetNodeRight(DAPINODE node, Integer rightID) : Integer
+DAPI.GetNodeRights(DAPINODE node) : RecArray
+DAPI.GetNodeUserAttr(DAPINODE node, String attrName, [Integer\n\tattrType]) : Dynamic
+DAPI.GetOriginalNode(DAPINODE node) : DAPINODE
+DAPI.GetParentNode(DAPINODE node) : DAPINODE
+DAPI.GetRendition(DAPIVERSION version, String renditionType) :\n\tDAPIVERSION
+DAPI.GetVersion(DAPINODE node, Integer versionNum) :\n\tDAPIVERSION
+DAPI.GetVersionByID(Integer versionID, DAPISESSION session) :\n\tDAPIVERSION
+DAPI.GetVersionByName(DAPINODE node, String versionName) :\n\tDAPIVERSION
+DAPI.GetVersionColumnNames(DAPISESSION session, Integer columnType)\n\t: List
+DAPI.GetVersionUserAttr(DAPIVERSION version, String attrName) :\n\tDynamic
+DAPI.IsInTree(DAPINODE node, DAPINODE tree) : Boolean
+DAPI.ListAliasNodes(DAPINODE node, [Integer permissions]) :\n\tList
+DAPI.ListCategories(DAPISESSION session) : RecArray
+DAPI.ListCategoryAttrs(DAPISESSION session, [String category]) :\n\tRecArray
+DAPI.ListContents(DAPISESSION session, Integer volumeID, Integer\n\tnodeID, String viewName, [String query], [Integer\n\tpermissions]) : RecArray
+DAPI.ListGenerations(DAPINODE node, [Integer permissions]) :\n\tList
+DAPI.ListGensFromRelease(DAPINODE node, Integer major, Integer\n\tminor, [Integer permissions]) : List
+DAPI.ListGensFromVersion(DAPIVERSION version, [Integer permissions])\n\t: List
+DAPI.ListRenditions(DAPIVERSION version) : List
+DAPI.ListSubNodes(DAPINODE node, [String query], [String category],\n\t[String catAttrQuery], [Boolean autoExpand], [Integer\n\tpermissions]) : List
+DAPI.ListVersions(DAPINODE node) : List
+DAPI.LockVersion(DAPIVERSION version, Integer lockFlag) :\n\tInteger
+DAPI.MoveNode(DAPINODE node, DAPINODE parent, [Dynamic newNames],\n\t[Boolean forceInheritPerm]) : Integer
+DAPI.NextOrderingPos(DAPINODE node) : Integer
+DAPI.NumAliasNodes(DAPINODE node) : Integer
+DAPI.NumGenerations(DAPINODE node) : Integer
+DAPI.NumGensFromRelease(DAPINODE node, Integer major, Integer minor)\n\t: Integer
+DAPI.NumGensFromVersion(DAPIVERSION version) : Integer
+DAPI.NumRenditions(DAPIVERSION version) : Integer
+DAPI.NumSubNodes(DAPINODE node) : Integer
+DAPI.NumVersions(DAPINODE node) : Integer
+DAPI.OpenReadVerStream(DAPIVERSION version, [Boolean resourceFork])\n\t: DAPISTREAM
+DAPI.OpenWriteVerStream(DAPINODE node, DAPIVERSION version, Integer\n\tdataLength, String provider, [Boolean resourceFork]) :\n\tDAPISTREAM
+DAPI.PurgeVersions(DAPINODE node, [Integer numToKeep]) :\n\tInteger
+DAPI.RefreshNode(DAPINODE node) : Integer
+DAPI.RefreshVersion(DAPIVERSION version) : Integer
+DAPI.RenameNode(DAPINODE node, Dynamic newNames) : Integer
+DAPI.ReserveNode(DAPINODE node, Integer reserveFlag, [Integer\n\tuserID]) : Integer
+DAPI.SetCallback(DAPISESSION session, Dynamic script, [Dynamic\n\tobject]) : Integer
+DAPI.SetDefaultProvider(DAPISESSION session, String provider) :\n\tInteger
+DAPI.SetMultilingualComment(DAPINODE node, String\n\tlanguageCode)String newValue) : Integer
+DAPI.SetMultilingualName(DAPINODE node, String languageCode)String\n\tnewValue) : Integer
+DAPI.SetNodeUserAttr(DAPINODE node, String attrName, Dynamic value,\n\t[Integer attrType]) : Integer
+DAPI.SetVersionUserAttr(DAPIVERSION version, String attrName,\n\tDynamic value) : Integer
+DAPI.UnlockVersion(DAPIVERSION version) : Integer
+DAPI.UnreserveNode(DAPINODE node) : Integer
+DAPI.UpdCategory(DAPISESSION session, Record categoryRec) :\n\tInteger
+DAPI.UpdCategoryAttr(DAPISESSION session, Record attributeRec) :\n\tInteger
+DAPI.UpdateNode(DAPINODE node) : Integer
+DAPI.UpdateNodeRight(DAPINODE node, Integer rightID, Integer\n\tpermissions) : Integer
+DAPI.UpdateVersion(DAPIVERSION version) : Integer
+DAPI.VersionFetchable(DAPIVERSION version) : Boolean
+DAPI.VerStreamClose(DAPIVERSION version, DAPISTREAM stream) :\n\tInteger
+DAPI.VerStreamLenGet(DAPISTREAM stream) : Integer
+DAPI.VerStreamRead(DAPISTREAM stream, Integer dataLen) : Bytes
+DAPI.VerStreamWrite(DAPISTREAM stream, Bytes theBytes) :\n\tInteger
+DOMAttr.GetName() : String
+DOMAttr.GetSpecified() : Boolean
+DOMAttr.GetValue() : String
+DOMAttr.SetValue(String data) : Void
+DOMCharacterData.GetData() : String
+DOMCharacterData.SetData(String arg) : Void
+DOMCharacterData.GetLength() : Integer
+DOMCharacterData.SubstringData(Integer offset, Integer count) : String
+DOMCharacterData.AppendData(String arg) : Void
+DOMCharacterData.InsertData(Integer offset, String arg) : Void
+DOMCharacterData.DeleteData(Integer offset, Integer count) : Void
+DOMCharacterData.ReplaceData(Integer offset, Integer count, String arg) :\n\tVoid
+DOMDocument.New() : DOMDocument
+DOMDocument.GetDoctype() : DOMDocumentType
+DOMDocument.GetImplementation() : DOMImplementation
+DOMDocument.GetDocumentElement() : DOMElement
+DOMDocument.CreateElement(String tagName) : DOMElement
+DOMDocument.CreateDocumentFragment() : DOMDocumentFragment
+DOMDocument.CreateTextNode(String data) : DOMText
+DOMDocument.CreateComment(String data) : DOMComment
+DOMDocument.CreateCDATASection(String data) : DOMCDATASection
+DOMDocument.CreateProcessingInstruction(String target, String data) :\n\tDOMProcessingInstruction
+DOMDocument.CreateAttribute(String name) : DOMAttr
+DOMDocument.CreateEntityReference(String name) : DOMEntityReference
+DOMDocument.GetElementsByTagName(String tagName) : DOMNodeList
+DOMDocumentType.GetName() : String
+DOMDocumentType.GetEntities() : DOMNamedNodeMap
+DOMDocumentType.GetNotations() : DOMNamedNodeMap
+DOMElement.GetTagName() : String
+DOMElement.GetAttribute(String name) : String
+DOMElement.SetAttribute(String name, String value) : Void
+DOMElement.RemoveAttribute(String name) : Void
+DOMElement.GetAttributeNode(String name) : DOMAttr
+DOMElement.SetAttributeNode(DOMAttr newAttr) : DOMAttr
+DOMElement.RemoveAttributeNode(DOMAttr oldAttr) : DOMAttr
+DOMElement.GetElementsByTagName(String name) : DOMNodeList
+DOMElement.Normalize() : Void
+DOMEntity.GetPublicID() : String
+DOMEntity.GetSystemID() : String
+DOMEntity.GetNotationName() : String
+DOMImplementation.HasFeature(String feature, String version) : Boolean
+DOMNamedNodeMap.GetNamedItem(String name) : DOMNode
+DOMNamedNodeMap.SetNamedItem(DOMNode node) : DOMNode
+DOMNamedNodeMap.RemoveNamedItem(String name) : DOMNode
+DOMNamedNodeMap.Item(Integer index) : DOMNode
+DOMNamedNodeMap.GetLength() : Integer
+DOMNode.ELEMENT_NODE (Integer)
+DOMNode.ATTRIBUTE_NODE (Integer)
+DOMNode.TEXT_NODE (Integer)
+DOMNode.CDATA_SECTION_NODE (Integer)
+DOMNode.ENTITY_REFERENCE_NODE (Integer)
+DOMNode.ENTITY_NODE (Integer)
+DOMNode.PROCESSING_INSTRUCTION_NODE (Integer)
+DOMNode.COMMENT_NODE (Integer)
+DOMNode.DOCUMENT_NODE (Integer)
+DOMNode.DOCUMENT_TYPE_NODE (Integer)
+DOMNode.DOCUMENT_FRAGMENT_NODE (Integer)
+DOMNode.NOTATION_NODE (Integer)
+DOMNode.GetNodeName() : String
+DOMNode.GetNodeValue() : String
+DOMNode.SetNodeValue(String nodeValue) : Void
+DOMNode.GetNodeType() : Integer
+DOMNode.GetParentNode() : DOMNode
+DOMNode.GetChildNodes() : DOMNodeList
+DOMNode.GetFirstChild() : DOMNode
+DOMNode.GetLastChild() : DOMNode
+DOMNode.GetPreviousSibling() : DOMNode
+DOMNode.GetNextSibling() : DOMNode
+DOMNode.GetAttributes() : DOMNamedNodeMap
+DOMNode.GetOwnerDocument() : DOMDocument
+DOMNode.InsertBefore(DOMNode newChild, DOMNode refChild) : DOMNode
+DOMNode.ReplaceChild(DOMNode newChild, DOMNode oldChild) : DOMNode
+DOMNode.RemoveChild(DOMNode oldChild) : DOMNode
+DOMNode.AppendChild(DOMNode newChild) : DOMNode
+DOMNode.HasChildNodes() : Boolean
+DOMNode.CloneNode(Boolean deep) : DOMNode
+DOMNode.Cast() : Dynamic
+DOMNodeList.Item(Integer index) : DOMNode
+DOMNodeList.GetLength() : Integer
+DOMNotation.GetPublicID() : String
+DOMNotation.GetSystemID() : String
+DOMParser.INDEX_SIZE_ERR (Integer)
+DOMParser.DOMSTRING_SIZE_ERR (Integer)
+DOMParser.HIERARCHY_REQUEST_ERR (Integer)
+DOMParser.WRONG_DOCUMENT_ERR (Integer)
+DOMParser.INVALID_CHARACTER_ERR (Integer)
+DOMParser.NO_DATA_ALLOWED_ERR (Integer)
+DOMParser.NO_MODIFICATION_ALLOWED_ERR (Integer)
+DOMParser.NOT_FOUND_ERR (Integer)
+DOMParser.NOT_SUPPORTED_ERR (Integer)
+DOMParser.INUSE_ATTRIBUTE_ERR (Integer)
+DOMParser.INVALID_STATE_ERR (Integer)
+DOMParser.SYNTAX_ERR (Integer)
+DOMParser.INVALID_MODIFICATION_ERR (Integer)
+DOMParser.NAMESPACE_ERR (Integer)
+DOMParser.INVALID_ACCESS_ERR (Integer)
+DOMParser.UNKNOWN_EXCEPTION (Integer)
+DOMParser.Message (Integer)
+DOMParser.Warning (Integer)
+DOMParser.Error (Integer)
+DOMParser.FatalError (Integer)
+DOMParser.Val_Never (Integer)
+DOMParser.Val_Always (Integer)
+DOMParser.Val_Auto (Integer)
+DOMParser.New() : DOMParser
+DOMParser.Parse(String xmlFile) : Assoc
+DOMParser.ParseBytes(Bytes xmlData) : Assoc
+DOMParser.GetDocument() : DOMDocument
+DOMParser.GetErrorCount() : Integer
+DOMParser.SetDoValidation(Boolean newState) : Void
+DOMParser.GetDoNamespaces() : Boolean
+DOMParser.SetDoNamespaces(Boolean newState) : Void
+DOMParser.SetExpandEntityReferences(Boolean newState) : Void
+DOMParser.SetEntityResolver(Dynamic objref, Dynamic entryName) :\n\tVoid
+DOMParser.GetExitOnFirstFatalError() : Boolean
+DOMParser.SetExitOnFirstFatalError(Boolean newState) : Void
+DOMParser.GetValidationConstraintFatal() : Boolean
+DOMParser.SetValidationConstraintFatal(Boolean newState) : Void
+DOMParser.GetCreateEntityReferenceNodes() : Boolean
+DOMParser.SetCreateEntityReferenceNodes(Boolean newState) : Void
+DOMParser.GetIncludeIgnorableWhitespace() : Boolean
+DOMParser.SetIncludeIgnorableWhitespace(Boolean newState) : Void
+DOMParser.GetValidationScheme() : Integer
+DOMParser.SetValidationScheme(Integer scheme) : Void
+DOMParser.GetDoSchema() : Boolean
+DOMParser.SetDoSchema(Boolean newState) : Void
+DOMParser.GetValidationSchemaFullChecking() : Boolean
+DOMParser.SetValidationSchemaFullChecking(Boolean newState) : Void
+DOMParser.GetExternalSchemaLocation() : String
+DOMParser.SetExternalSchemaLocation(String schemaList) : Void
+DOMParser.GetExternalNoNamespaceSchemaLocation() : String
+DOMParser.SetExternalSchemaLocation(String location) : Void
+DOMParser.GetLoadExternalDTD() : Boolean
+DOMParser.SetLoadExternalDTD(Boolean newState) : Void
+DOMParser.GetCreateCommentNodes() : Boolean
+DOMParser.SetCreateCommentNodes(Boolean newState) : Void
+DOMProcessingInstruction.GetTarget() : String
+DOMProcessingInstruction.GetData() : String
+DOMProcessingInstruction.SetData(String data) : Void
+DOMText.SplitText(Integer offset) : DOMText
+Env.LC_ALL (Integer)
+Env.LC_COLLATE (Integer)
+Env.LC_CTYPE (Integer)
+Env.LC_MONETARY (Integer)
+Env.LC_NUMERIC (Integer)
+Env.LC_TIME (Integer)
+Env.LC_MESSAGES (Integer)
+Env.Get(String environmentVariableName) : String
+Env.GetDefault(String environmentVariableName, String defaultValue)\n\t: String
+Env.Put(String nameValue) : Boolean
+Env.SetLocale(Integer lcConstant , String lcString) : String
+Env.Translate(String translationString) : String
+File.AppendMode (String)
+File.DOSTermination (String)
+File.E_AlreadyOpen (Error)
+File.E_CannotCopyDirs (Error)
+File.E_DestAlreadyExists (Error)
+File.E_Eof (Error)
+File.E_FailedCreatingDest (Error)
+File.E_FailedOpeningDest (Error)
+File.E_FailedOpeningSource (Error)
+File.E_FileSystemError (Error)
+File.E_Filename (Error)
+File.E_InsufficientMemory (Error)
+File.E_Mode (Error)
+File.E_ModeError (Error)
+File.E_NotADirectory (Error)
+File.E_NotEnoughFreeSpace (Error)
+File.E_NotOpen (Error)
+File.E_NotOpenForBinaryAccess (Error)
+File.E_NotOpenForRead (Error)
+File.E_NotOpenForWrite (Error)
+File.E_NotSameDirectory (Error)
+File.E_Open (Error)
+File.E_SourceNotFound (Error)
+File.E_TargetDirNotFound (Error)
+File.E_Write (Error)
+File.FileCopyType (Integer)
+File.FileType (Integer)
+File.MACTermination (String)
+File.ReadBinMode (String)
+File.ReadMode (String)
+File.st_mode (String)
+File.st_ino (String)
+File.st_dev (String)
+File.st_rdev (String)
+File.st_nlink (String)
+File.st_uid (String)
+File.st_gid (String)
+File.st_size (String)
+File.st_atime (String)
+File.st_mtime (String)
+File.st_ctime (String)
+File.UNIXTermination (String)
+File.WriteBinMode (String)
+File.WriteMode (String)
+File.Access(String filePath) : String
+File.Close(File openFile) : Boolean
+File.CopyEnd(FileCopy operation) : Boolean
+File.CopyNext(FileCopy operation) : Boolean
+File.CopyStart(Dynamic source, Dynamic destination, [Integer\n\tblockSize]) : FileCopy
+File.Create(Dynamic newFile) : Boolean
+File.Delete(Dynamic delFile) : Boolean
+File.Dir([String directory]) : String
+File.Eof(File openFile) : Boolean
+File.Exists(Dynamic theFile) : Boolean
+File.FileList([String directory]) : List
+File.FileToString(File theFile) : String
+File.Flush(File theFile) : Dynamic
+File.FreeSpace([String target]) : Long
+File.GetName(Dynamic theFile) : String
+File.GetPath(Dynamic myFile) : String
+File.IsDir(String directory) : Boolean
+File.IsDirSpec(String directory) : Boolean
+File.IsText(Dynamic theFile) : Boolean
+File.LineTermination(File theFile, String terminator) : Integer
+File.MacCreator(File arg1, [String arg2]) : String
+File.MacType(File arg1, [String arg2]) : String
+File.NextBlock(FileCopy operation) : Integer
+File.NumBlocks(FileCopy operation) : Integer
+File.Open(Dynamic theFile, String mode) : File
+File.OpenStream(Dynamic theFile, String mode) : File
+File.Read(File theFile, [Integer numChars]) : String
+File.ReadBytes(File theFile, Integer numBytes) : Bytes
+File.ReadUntil(File theFile, String delimiter) : String
+File.ReadValue(File theFile) : Dynamic
+File.Rename(Dynamic theFile, Dynamic name) : Boolean
+File.ResolveAlias(String arg1) : String
+File.Rewind(File theFile) : Boolean
+File.Seek(File theFile, Integer newPosition) : Integer
+File.Separator() : String
+File.SetName(File theFile, String newName) : File
+File.StartupDir() : String
+File.Stat(Dynamic statFile) : Assoc
+File.StringToFile(String fileSpec) : File
+File.SystemDir() : String
+File.ThreadDir([String directory]) : String
+File.Write(File theFile, String text) : Boolean
+File.WriteBytes(File theFile, Bytes value) : Integer
+File.WriteValue(File theFile, Dynamic value) : Dynamic
+Fileprefs.NO_FILE (Integer)
+Fileprefs.NO_SECTION (Integer)
+Fileprefs.NO_VALUE (Integer)
+Fileprefs.NO_WRITE (Integer)
+Fileprefs.VALUE_TRUNCATED (Integer)
+Fileprefs.OK (Integer)
+Fileprefs.AddPref(Fileprefs theFileprefs, String sectionName, String\n\tprefName, String prefValue) : Integer
+Fileprefs.Close(Fileprefs theFileprefs) : Integer
+Fileprefs.Create(String prefFilePath) : Integer
+Fileprefs.DelPref(Fileprefs theFileprefs, String sectionName, String\n\tprefName) : Integer
+Fileprefs.GetPath(Fileprefs theFileprefs, String sectionName, String\n\tprefName) : String
+Fileprefs.GetPref(Fileprefs theFileprefs, String sectionName, String\n\tprefName) : String
+Fileprefs.ListSections(Fileprefs theFileprefs) : List
+Fileprefs.ListValues(Fileprefs theFileprefs, String sectionName) :\n\tAssoc
+Fileprefs.Open(String prefFilePath, [Boolean cache=TRUE]) :\n\tFileprefs
+Fileprefs.Refresh(Fileprefs theFileprefs) : Integer
+Frame.FrameType (Integer)
+Frame.kAnywhere (Integer)
+Frame.kFrame (Integer)
+Frame.kParents (Integer)
+Frame.AddParent(Frame theFrame, Dynamic parentDefinition) :\n\tBoolean
+Frame.AddSlot(Frame theFrame, String slotName, [Dynamic\n\tinitialValue]) : Boolean
+Frame.HasParent(Frame theFrame, Dynamic parentValue) : Boolean
+Frame.HasSlot(Frame theFrame, String slotName, [Integer\n\tsearchOptions]) : Boolean
+Frame.New([List parentDefs], [List instanceDefs]) : Frame
+Frame.Parents(Frame theFrame) : List
+Frame.RemoveParent(Frame theFrame, Dynamic parentDefinition) :\n\tBoolean
+Frame.RemoveSlot(Frame theFrame, String slotName) : Boolean
+Frame.SlotNames(Frame theFrame) : List
+Frame.Slots(Frame theFrame) : List
+Global.Application([String name], [Dynamic value]) : Dynamic
+Global.Thread([String name], [Dynamic value]) : Dynamic
+JavaObject.New(String className, List parameters) : JavaObject
+JavaObject.GetStaticField(String className, String fieldName) :\n\tDynamic
+JavaObject.SetStaticField(String className, String fieldName, Dynamic\n\tvalue) : Dynamic
+JavaObject.GetError() : String
+JavaObject.GetErrorStack() : List
+JavaObject.InvokeMethod(String methodName, List parameters) : Dynamic
+JavaObject.GetField(String fieldName) : Dynamic
+JavaObject.SetField(String fieldName, Dynamic value) : Dynamic
+Language.ERROR (Error)
+Language.BAD_TABLE_FORMAT (Error)
+Language.DISABLED (Error)
+Language.INVALID (Error)
+Language.EMPTY (Error)
+Language.EMPTY_VALUE (Error)
+Language.EMPTY_LOCAL (Error)
+Language.INVALID_ASSOC (Error)
+Language.OK (Integer)
+Language.GetSystemLanguages(CAPICONNECT connection) : RecArray
+Language.GetDefaultLanguage(CAPILOGIN login) : String
+Language.SetDefaultLanguage(CAPILOGIN login)String languageCode) :\n\tInteger
+Language.GetEnabledLanguages(CAPICONNECT connection) :  RecArray
+Language.InsertLanguage(CAPILOGIN login)String languageCode)Boolean\n\tenabled) : Integer
+Language.DeleteLanguage(CAPILOGIN login)String languageCode) :\n\tInteger
+Language.RenameLanguage(CAPICONNECT connect)String languageCode)String\n\tlanguageName)String languageNameLocal) : Integer
+Language.EnableLanguage(CAPILOGIN login)String languageCode) :\n\tInteger
+Language.DisableLanguage(CAPILOGIN login)String languageCode) :\n\tInteger
+Language.IsLanguageEnabled(CAPICONNECT connection)String languageCode) :\n\tBoolean
+Language.DetermineCoreValue(CAPILOGIN login)Assoc values) : String
+Language.DetermineCoreLanguageCode(CAPILOGIN login)Assoc values) :\n\tString
+Logging.CS_LOGGER_NAME_PREFIX (String)
+Logging.LEVEL_OFF (Integer)
+Logging.LEVEL_FATAL (Integer)
+Logging.LEVEL_ERROR (Integer)
+Logging.LEVEL_WARN (Integer)
+Logging.LEVEL_INFO (Integer)
+Logging.LEVEL_DEBUG (Integer)
+Logging.LEVEL_TRACE (Integer)
+Logging.LEVEL_ALL (Integer)
+Logging.OK (Integer)
+Logging.GetLoggerNames(String loggerPrefix, [ Boolean collapse=TRUE ])\n\t: List
+Logging.GetLogLevel(String loggerName) : Integer
+Logging.SetLogLevel(String loggerName)Integer logLevel) : Integer
+Logging.LogLevelToString(Integer logLevel) :  String
+MailMessage.New() : MailMessage
+MailMessage.AddContent(String content, Integer contentTransferEncodingType)\n\t: Integer
+MailMessage.AddFileAttachment(String attachmentName, String filename,\n\tInteger contentTransferEncodingType, [String mimeType]) :\n\tInteger
+MailMessage.AddFilePart(String partName, String fileName, Integer\n\tcontentDisposition, Integer contentEncoding, [String\n\tmimeType]) : Integer
+MailMessage.AddRecipient(Integer type, String emailAddress, [String\n\tfullName]) : Integer
+MailMessage.AddStringAttachment(String attachmentName, String stringData,\n\tInteger contentTransferEncodingType, [String mimeType]) :\n\tInteger
+MailMessage.AddStringPart(String partName, String stringData, Integer\n\tcontentDisposition, Integer contentEncoding, [String\n\tmimeType]) : Integer
+MailMessage.GetContent() : String
+MailMessage.GetContentType() : String
+MailMessage.GetDate() : String
+MailMessage.GetHeaderField(String fieldName) : String
+MailMessage.GetHeaders() : List
+MailMessage.GetLastError() : String
+MailMessage.GetMultipartContent() : RecArray
+MailMessage.GetRawMessage() : String
+MailMessage.GetRecipients() : RecArray
+MailMessage.GetSender() : String
+MailMessage.GetSubject() : String
+MailMessage.IsMultipart() : Boolean
+MailMessage.SetContent(String content, [Integer contentEncoding]) :\n\tInteger
+MailMessage.SetContentType(String mediaType) : Integer
+MailMessage.SetDate(Date date) : Integer
+MailMessage.SetHeaderField(String fieldName, String fieldData) :\n\tInteger
+MailMessage.SetSender(String sender) : Integer
+MailMessage.SetSubject(String subject) : Integer
+Math.E_Overflow (Error)
+Math.E_Singularity (Error)
+Math.E_StackFault (Error)
+Math.E_Underflow (Error)
+Math.Abs(Real number) : Real
+Math.Ceil(Real number) : Real
+Math.Floor(Real number) : Real
+Math.Log(Real number) : Real
+Math.Log10(Real number) : Real
+Math.Max(Real number1, Real number2) : Real
+Math.Min(Real number1, Real number2) : Real
+Math.Power(Real base, Real exponent) : Real
+Math.Random(Integer range, [Integer seed]) : Integer
+Math.Round(Real number) : Real
+Math.RoundSignificant(Real number, Integer digits) : Integer
+Math.Sqrt(Real number) : Real
+Math.Trunc(Real number) : Real
+Math.TruncLeft(Real number) : Real
+Memcached.ERROR (Error)
+Memcached.INIT_ERROR (Error)
+Memcached.KEYALREADYEXIST (Error)
+Memcached.KEYNOTFOUND (Error)
+Memcached.NOMEMORY (Error)
+Memcached.NOTINITIALIZED (Error)
+Memcached.SERVERNOTFOUND_ERROR (Error)
+Memcached.SUCCESS (Integer)
+Memcached.Add(String key, String value, Integer valueLength, Integer\n\ttimeout, Integer flags) : Integer
+Memcached.AddServer(String host, Integer port, Integer min, Integer smax,\n\tInteger max, Integer ttl) : Integer
+Memcached.Decrement(String key, Integer num) : Integer
+Memcached.Delete(String key, Integer timeout) : Integer
+Memcached.Get(String key) : String
+Memcached.Increment(String key, Integer num) : Integer
+Memcached.Init(Integer maxServers) : Integer
+Memcached.MultiGet(List keyList) : Assoc
+Memcached.Replace(String key, String newValue, Integer newValueLength,\n\tInteger timeout, Integer flags) : Integer
+Memcached.Set(String key, String value, Integer valueLength, Integer\n\ttimeout, Integer flags) : Integer
+Memcached.Stats(String host, Integer port) : Assoc
+Memcached.Version(String host, Integer port) : String
+OTDS.Activate() : Bytes
+OTDS.Connect(String uri) : Boolean
+OTDS.Deactivate() : Boolean
+OTDS.Disconnect() : Boolean
+OTDS.GetRedirectURL(String uri) : String
+OTDS.GetResourceID() : String
+OTDS.GetResources(String filter) : RecArray
+OTDS.GetVersion() : String
+OTDS.Host() : String
+OTDS.Initialize(CAPILOGIN login) : String
+OTDS.IsActivated() : Boolean
+OTDS.LoginRequestTicketForResource(String username, String password,\n\tString resourceID) : String
+OTDS.Port() : String
+OTDS.RequestTicketForUser(String username, String resourceID, String\n\tticket) : String
+OTDS.RequestTicketForResource(String token, String resourceID) :\n\tString
+OTDS.SSOCookieDomain() : String
+OTDS.ValidateTicket(String ticket) : Assoc
+Pattern.E_IllegalChangePattern (Error)
+Pattern.E_IllegalFindPattern (Error)
+Pattern.PatChangeType (Integer)
+Pattern.PatFindType (Integer)
+Pattern.Change(String target, Dynamic find, Dynamic change, [Boolean\n\tignoreCase]) : String
+Pattern.CompileChange(String pattern) : PatChange
+Pattern.CompileFind(String pattern) : PatFind
+Pattern.Find(String target, Dynamic find, [Boolean ignoreCase]) :\n\tList
+POP3Session.New(String host, [Integer port]) : POP3Session
+POP3Session.Close() : Integer
+POP3Session.DeleteMessage(Dynamic messageIndex) : Integer
+POP3Session.GetLastError() : String
+POP3Session.GetTimeout() : Integer
+POP3Session.GetUID(Integer messageIndex) : String
+POP3Session.InitContext(SSLOptions options) : Integer
+POP3Session.ListMessage(Dynamic messageIndex) : Integer
+POP3Session.ListMessages([Integer listType]) : List
+POP3Session.Login(String username, String password) : Boolean
+POP3Session.MessageCount() : Integer
+POP3Session.RetrieveHeader(Dynamic messageIndex) : List
+POP3Session.RetrieveMessage(Dynamic messageIndex) : MailMessage
+POP3Session.SecureLogin(String username, String password) : Integer
+POP3Session.SendCommand(String command, [String arguments]) : Integer
+POP3Session.ServerHasUIDs() : Boolean
+POP3Session.SetTimeout(Integer timeout) : Integer
+RecArray.RecArrayType (Integer)
+RecArray.RecordType (Integer)
+RecArray.AddField(RecArray theRecArray, Dynamic fieldNames) :\n\tInteger
+RecArray.AddRecord(RecArray theRecArray, [List values]) : Integer
+RecArray.Allocate(RecArray theRecArray, Integer numRecords) :\n\tInteger
+RecArray.ColumnToList(RecArray theRecArray, Dynamic colRef) : List
+RecArray.Copy(RecArray theRecArray) : RecArray
+RecArray.Create([List fieldNames], [Integer numRecords]) : RecArray
+RecArray.CreateRecord([List fieldNames], [List values]) : Record
+RecArray.DropField(RecArray theRecArray, Dynamic fieldName) :\n\tBoolean
+RecArray.DropRecord(RecArray theRecArray, Integer index1, [Integer\n\tindex2]) : Boolean
+RecArray.FieldNames(Dynamic theRecArray) : List
+RecArray.GetRecord(Dynamic value, [Integer index]) : List
+RecArray.InsertRecordAt(RecArray theRecArray, Dynamic values, Integer\n\tposition) : Record
+RecArray.IsColumn(Dynamic value, String fieldName) : Integer
+RecArray.RenameField(RecArray theRecArray, Dynamic oldField, String\n\tnewField) : Boolean
+RecArray.SetRecord(Dynamic toReplace, Dynamic values, [Integer\n\tposition]) : Record
+RecArray.Sort(RecArray theRecArray, Dynamic sortVal, [Boolean\n\tignoreCase]) : RecArray
+Regex.Match(String value) : Boolean
+Regex.SetPattern(String pattern) : void
+SAXParser.New() : SAXParser
+SAXParser.Parse(String xmlFile) : Assoc
+SAXParser.SetDoValidation(Boolean newState) : Void
+SAXParser.SetDoNamespaces(Boolean newState) : Void
+SAXParser.SetExitOnFirstFatalError(Boolean newState) : Void
+SAXParser.SetDeleteTmpFiles(Boolean newState) : Void
+SAXParser.RemoveTmpFiles() : Void
+SAXParser.SetTmpFileTags(List tags) : Void
+SAXParser.SetCharactersHandler(Dynamic sax, Dynamic handler) : Void
+SAXParser.SetEndDocumentHandler(Dynamic sax, Dynamic handler) : Void
+SAXParser.SetEndElementHandler(Dynamic sax, Dynamic handler) : Void
+SAXParser.SetIgnorableWhitespaceHandler(Dynamic sax, Dynamic handler) :\n\tVoid
+SAXParser.SetProcessingInstructionHandler(Dynamic sax, Dynamic handler) :\n\tVoid
+SAXParser.SetResetDocumentHandler(Dynamic sax, Dynamic handler) :\n\tVoid
+SAXParser.SetStartDocumentHandler(Dynamic sax, Dynamic handler) :\n\tVoid
+SAXParser.SetStartElementHandler(Dynamic sax, Dynamic handler) :\n\tVoid
+Security.Encrypt(String value, String key, Integer encryptionType, :\n\tString
+Security.Decrypt(String value, String key, Integer encryptionType, :\n\tString
+Security.EncryptBytes(String value, String key, Integer encryptionType,\n\t: Bytes
+Security.DecryptBytes(Bytes value, String key, Integer encryptionType, :\n\tString
+Security.Hash(String value, Integer hashType, : String
+SMTPSession.New(String host, Integer port) : SMTPSession
+SMTPSession.Close() : Integer
+SMTPSession.Connect([String host]) : Integer
+SMTPSession.GetLastError() : String
+SMTPSession.GetTimeout() : Integer
+SMTPSession.InitContext(SSLOptions options) : Integer
+SMTPSession.Login(String username, String password, [Integer loginMethod])\n\t: Integer
+SMTPSession.SecureLogin(String hostname, [String username, String\n\tpassword]) : Integer
+SMTPSession.SendCommand(String command, [String arguments]) : Integer
+SMTPSession.SendMessage(MailMessage message) : Integer
+SMTPSession.SetTimeout(Integer timeout) : Integer
+Socket.ConnectRequest (Integer)
+Socket.E_BufferTooSmall (Error)
+Socket.E_EndOfFile (Error)
+Socket.E_Error (Error)
+Socket.E_UserCancelled (Error)
+Socket.ReadReady (Integer)
+Socket.kSecurityNone (Integer)
+Socket.kSecuritySSL2 (Integer)
+Socket.kSecuritySSL3 (Integer)
+Socket.Accept(Socket accept, Socket request) : Boolean
+Socket.Close(Socket sock) : Boolean
+Socket.CompareIpAddresses(String addr1, String addr2) : Integer
+Socket.Connect(Socket sock, String host, Integer port) : Boolean
+Socket.Create([Dynamic featurename], [Dynamic callbackobj]) :\n\tSocket
+Socket.Flush(Socket sock) : Void
+Socket.GetAddrByName(String hostname) : String
+Socket.Listen(Socket sock, Integer port) : Boolean
+Socket.Read(Socket sock) : String
+Socket.ReadBytes(Socket sock) : Bytes
+Socket.StreamBytesUntil(Socket sock, Dynamic token, [Integer\n\tmaxlength], [Integer msDelay]) : List
+Socket.StreamUntil(Socket sock, [Dynamic token], [Integer maxlength],\n\t[Integer msDelay]) : List
+Socket.Write(Socket sock, Dynamic value) : Boolean
+Sql.AUTOCOMMIT (Integer)
+Sql.CACHE (Integer)
+Sql.CACHEDYNAMIC (Integer)
+Sql.COMMIT (Integer)
+Sql.MULTIEXEC (Integer)
+Sql.NOCACHE (Integer)
+Sql.NOLOG (Integer)
+Sql.NOTRANSWARN (Integer)
+Sql.ROLLBACK (Error)
+Sql.SLOWMODE (Integer)
+Sql.Alloc(Integer conType, CAPILOG logObj, CAPIERR errObj, Integer\n\tnum) : SqlConnection
+Sql.AllocFromConnect(CAPICONNECT connect) : SqlConnection
+Sql.Bind(SqlCursor cursor, List values) : Integer
+Sql.Close(SqlCursor cursor) : Integer
+Sql.ColNames(SqlCursor cursor) : List
+Sql.Cols(SqlCursor cursor) : List
+Sql.Connect(SqlConnection connect, String srvName, String dbName,\n\tString usrName, String pword, String applStr, String hostStr)\n\t: Integer
+Sql.Declare(SqlConnection connect, String stmt, [Integer flags]) :\n\tSqlCursor
+Sql.Disconnect(SqlConnection connect) : Integer
+Sql.EndTransaction(SqlConnection connect, Dynamic value) :\n\tInteger
+Sql.Exec(SqlConnection connect, Integer cacheFlag, -->String stmt,\n\t[Dynamic sub], [Dynamic sub]) : RecArray
+Sql.ExecN(SqlConnection connect, String stmt, RecArray params) :\n\tRecArray
+Sql.Execute(SqlCursor cursor) : Integer
+Sql.Fetch(SqlCursor cursor) : Integer
+Sql.GetBlob(SqlConnection arg1, String arg2, Integer arg3, Integer\n\targ4) : Integer
+Sql.IsSelect(SqlCursor cursor) : Integer
+Sql.NCols(SqlCursor cursor) : Integer
+Sql.Now(SqlConnection connect) : Date
+Sql.Open(SqlCursor cursor) : Integer
+Sql.Prepare(SqlCursor cursor) : Integer
+Sql.PutBlob(SqlConnection connect, String arg2, Integer arg3,\n\tInteger arg4) : Dynamic
+Sql.RowCount(SqlCursor cursor) : Integer
+Sql.StartTransaction(SqlConnection connect) : Integer
+SSLOptions.New() : SSLOptions
+SSLOptions.CertificateFileLocation() : String
+SSLOptions.CipherList() : String
+SSLOptions.ClearErrorList() : Integer
+SSLOptions.GetIgnoredErrorList() : List
+SSLOptions.GetLastError() : String
+SSLOptions.IgnoreError(Integer errorConstant) : Integer
+SSLOptions.PrivateKeyFileLocation() : String
+SSLOptions.PrivateKeyPassphrase() : String
+SSLOptions.RootCertificatesLocation() : String
+SSLOptions.SetCertificateFileLocation(String filepath) : Integer
+SSLOptions.SetCipherList(String cipherList) : Integer
+SSLOptions.SetPrivateKeyFileLocation(String filepath) : Integer
+SSLOptions.SetPrivateKeyPassphrase(String passPhrase) : Integer
+SSLOptions.SetRootCertificatesLocation(String filepath) : Integer
+SSLOptions.SetVerificationDepth(Integer depth) : Integer
+SSLOptions.SetVerificationFlag(Integer flag) : Integer
+SSLOptions.VerificationDepth() : Integer
+SSLOptions.VerificationFlag() : Integer
+Str.CR (String)
+Str.CRLF (String)
+Str.E_Truncation (Error)
+Str.LF (String)
+Str.OldEncoding (Integer)
+Str.TAB (String)
+Str.Ascii(Dynamic value) : Dynamic
+Str.ByteLength(String aString) : Integer
+Str.CSpn(String aString, String searchChars) : Integer
+Str.CString(String aString, [String quoteChar]) : String
+Str.Capitalize(String aString) : String
+Str.Catenate(List values, [String appendString]) : String
+Str.Chr(String aString, String ch) : Integer
+Str.Cmp(String string1, String string2, [Integer chars]) :\n\tInteger
+Str.CmpBE(String string1, String string2) : Integer
+Str.CmpI(String string1, String string2, [Integer chars]) :\n\tInteger
+Str.CmpIBE(String string1, String string2) : Integer
+Str.Collapse(String aString) : String
+Str.Compress(String aString) : String
+Str.Decode(String aString, [Integer keyToEncode], [Integer\n\tversion]) : String
+Str.EOL() : String
+Str.Elements(String aString, String delimiter) : List
+Str.Encode(String aString, [Integer keyToEncode], [Integer\n\tversion]) : String
+Str.FileToString(String filename) : String
+Str.Format(String format, [Dynamic arg], [Dynamic arg], [Dynamic\n\targ]) : String
+Str.FromBase64(String aString) : String
+Str.Hyphenate(String aString, Integer maxLength) : List
+Str.IntlSort([Boolean newValue]) : Boolean
+Str.Locate(String searchInStr, String searchForStr) : Integer
+Str.LocateI(String searchInStr, String searchForStr) : Integer
+Str.Lower(String aString) : String
+Str.Quote(String aString, [String quote]) : String
+Str.RChr(String aString, String ch) : Integer
+Str.Replace(String aString, String find, String replace) :\n\tString
+Str.ReplaceAll(String aString, String find, String replace) :\n\tString
+Str.Set(Dynamic length, String value) : String
+Str.SJis2Jis(String aString) : String
+Str.Spn(String aString, String searchChars) : Integer
+Str.String(Dynamic value, [Boolean displayString]) : String
+Str.StringToInteger(String aString) : Integer
+Str.StringToReal(String aString) : Real
+Str.StringToValue(String aString) : Dynamic
+Str.Strip(String aString, String stripChars) : String
+Str.Substitute(String aString, Dynamic substitutions) : String
+Str.Tab() : String
+Str.ToBase64(String aString) : String
+Str.Trim(String aString) : String
+Str.Upper(String aString) : String
+Str.ValueToString(Dynamic value) : String
+System.DOS (String)
+System.English (Integer)
+System.Japanese (Integer)
+System.Korean (Integer)
+System.Mac (String)
+System.Motif (String)
+System.NotEncoded (Integer)
+System.Unix (String)
+System.UTF8 (Integer)
+System.Windows (String)
+System.AppBuildNo() : String
+System.AppPatchLevel() : String
+System.AppVersion() : String
+System.AppVersionList() : List
+System.BaselineRefCounts() : Boolean
+System.CharEncoding([Integer encodingType]) : Integer
+System.CurrentLocaleSuffix() : String
+System.DefaultLocaleSuffix() : String
+System.FilePrefsPath([String path]) : String
+System.GetLocaleDateFormats() : Assoc
+System.IntlLanguage([Integer languageConstant]) : Integer
+System.IntlStrings([Boolean flag]) : Boolean
+System.LanguageCode() : String
+System.LibSuffix() : String
+System.Mac() : Boolean
+System.Motif() : Boolean
+System.MultiByte([Boolean flag]) : Boolean
+System.Name() : String
+System.ProfileOff() : Boolean
+System.ProfileOn() : Boolean
+System.RefCounts() : String
+System.SetCurrentLocaleSuffix([String suffix]) : String
+System.Sleep([String duration]) : String
+System.ThreadID() : Integer
+System.ThreadIndex() : Integer
+System.Unix() : Boolean
+System.Version() : String
+System.Win32() : Boolean
+System.Windows() : Boolean
+UAPI.ANY (Integer)
+UAPI.CONTAINS (Integer)
+UAPI.ENDSWITH (Integer)
+UAPI.FACTORY (Integer)
+UAPI.FIRSTNAME (Integer)
+UAPI.GROUP (Integer)
+UAPI.LASTNAME (Integer)
+UAPI.MAILADDRESS (Integer)
+UAPI.NAME (Integer)
+UAPI.NEXT (Integer)
+UAPI.PREVIOUS (Integer)
+UAPI.PRIVATEGROUP (Integer)
+UAPI.PRIVATEPROJECT (Integer)
+UAPI.PRIV_DAPI_SESSION (Integer)
+UAPI.PRIV_LOGIN (Integer)
+UAPI.PRIV_PERM_BYPASS (Integer)
+UAPI.PRIV_PERM_SYSTEM (Integer)
+UAPI.PRIV_PERM_WORLD (Integer)
+UAPI.PRIV_UAPI_ADMIN (Integer)
+UAPI.PRIV_UAPI_GROUPS (Integer)
+UAPI.PRIV_UAPI_MANAGER (Integer)
+UAPI.PRIV_UAPI_PROJECTS (Integer)
+UAPI.PRIV_UAPI_SESSION (Integer)
+UAPI.PRIV_UAPI_USERS (Integer)
+UAPI.PRIV_WAPI_BYPASS (Integer)
+UAPI.PRIV_WAPI_SESSION (Integer)
+UAPI.PROJECT (Integer)
+UAPI.PROXY_DAPI (Integer)
+UAPI.PROXY_NONE (Integer)
+UAPI.PROXY_WAPI (Integer)
+UAPI.RIGHTID_SYSTEM (Integer)
+UAPI.RIGHTID_WORLD (Integer)
+UAPI.SOUNDSLIKE (Integer)
+UAPI.STARTSWITH (Integer)
+UAPI.SYSTEM (Integer)
+UAPI.USER (Integer)
+UAPI.Add(UAPISESSION session, Integer groupType, String groupName,\n\t[Integer leaderID = 0], [Dynamic groupData = UNDEFINED]) :\n\tInteger
+UAPI.AddTo(UAPISESSION session, Integer newType, String newName,\n\tInteger typeTo, String nameTo) : Integer
+UAPI.AddToByIDs(UAPISESSION session, Integer childID, Integer\n\tparentID) : Integer
+UAPI.AddUser(UAPISESSION session, String name, String password,\n\tInteger baseType, String baseName, Integer privileges,\n\t[Dynamic userData = UNDEFINED]) : Integer
+UAPI.AddUserProxyByID(UAPISESSION session, Integer userID, Integer\n\tproxyID, Integer proxyType) : Integer
+UAPI.AllocEx(UAPISESSION session) : UAPIUSER
+UAPI.AllocSession(CAPILOGIN llConn) : UAPISESSION
+UAPI.CheckAddPrivs(UAPISESSION session, Integer theType) :\n\tInteger
+UAPI.CheckAlterPrivs(UAPISESSION session, Record identifier) :\n\tInteger
+UAPI.ChildrenList(UAPISESSION session, Integer groupType, String\n\tgroupName) : RecArray
+UAPI.ChildrenListByID(UAPISESSION session, Integer groupID) :\n\tRecArray
+UAPI.Create(UAPISESSION session, Integer groupType, Integer spaceID,\n\tString groupName, [Integer leaderID = 0], [Dynamic groupData =\n\tUNDEFINED]) : Integer
+UAPI.CreateUser(UAPISESSION session, String name, String password,\n\tInteger groupID, integer spaceID, Integer privileges, [Dynamic\n\tuserData = UNDEFINED]) : Integer
+UAPI.Delete(UAPISESSION session, Integer groupType, String\n\tgroupName, [Integer remove = 0]) : Integer
+UAPI.DeleteByID(UAPISESSION session, Integer groupID, [Integer\n\tremove = 0]) : Integer
+UAPI.DeleteFrom(UAPISESSION session, Integer newType, String\n\tnewName,               Integer typeFrom, String nameFrom) :\n\tInteger
+UAPI.DeleteFromByIDs(UAPISESSION session, Integer childID, Integer\n\tparentID) : Integer
+UAPI.DeleteUser(UAPISESSION session, String userName) : Integer
+UAPI.DeleteUserByID(UAPISESSION session, Integer userID) :\n\tInteger
+UAPI.DeleteUserProxyByID(UAPISESSION session, Integer userID,\n\tInteger proxyType) : Integer
+UAPI.ExGet(UAPIUSER attribs, String userName) : RecArray
+UAPI.ExGetByID(UAPIUSER attribs, Integer userID) : RecArray
+UAPI.Expand(UAPISESSION session, RecArray theRecArray, String\n\tcolumnName) : Integer
+UAPI.ExpandEx(UAPISESSION session, RecArray theRecArray, String\n\tcolumnName) : RecArray
+UAPI.ExpandList(UAPISESSION session, RecArray theRecArray, List\n\tcolumnName) : Integer
+UAPI.ExSet(UAPIUSER attribs, String name, Dynamic value) :\n\tInteger
+UAPI.ExUpdate(UAPIUSER attribs) : Integer
+UAPI.Explode(UAPISESSION session, List explodeList) : RecArray
+UAPI.FreeEx(UAPIUSER attribs) : Integer
+UAPI.FreeSession(UAPISESSION session) : Integer
+UAPI.Get(UAPISESSION session, Integer theType, String name) :\n\tRecArray
+UAPI.GetByID(UAPISESSION session, Integer ID) : RecArray
+UAPI.GetUser(UAPISESSION session, String userName) : RecArray
+UAPI.GetUserByID(UAPISESSION session, Integer ID) : RecArray
+UAPI.GetUserLanguage(CAPILOGIN login) : Dynamic
+UAPI.GetUILanguageByUserID(CAPICONNECT connection, Integer ID) :\n\tString
+UAPI.LeaderList(UAPISESSION session, Integer ID) : RecArray
+UAPI.List(UAPISESSION session, Integer theType, [Integer spaceID =\n\t0]) : RecArray
+UAPI.ListUserProxysByID(UAPISESSION session, Integer userID) :\n\tRecArray
+UAPI.MembershipList(UAPISESSION session, Integer memberType, String\n\tmemberName, Integer groupType) : RecArray
+UAPI.MembershipListByID(UAPISESSION session, Integer memberID,\n\tInteger groupType) : RecArray
+UAPI.PowerList(UAPISESSION session, Integer targetType, Integer\n\tsearchType, String searchValue, Integer action, Integer nRows,\n\tInteger searchColumn, Integer searchOpr, Integer startID,\n\tString startValue, [Integer groupID = -1], [Integer spaceID =\n\t0]) : RecArray
+UAPI.PrefsDelete(UAPISESSION session, Integer ID, [String keyword =\n\t'']) : Integer
+UAPI.PrefsGet(UAPISESSION session, Integer ID, String keyword,\n\t[Dynamic dftValue = UNDEFINED]) : Dynamic
+UAPI.PrefsList(UAPISESSION session, Integer ID, [String keyword =\n\t'']) : RecArray
+UAPI.PrefsPut(UAPISESSION session, Integer ID, String keyword,\n\t[Dynamic value = UNDEFINED]) : Integer
+UAPI.Rename(UAPISESSION session, Integer theType, String\n\tcurrentName, String newName) : Integer
+UAPI.RenameByID(UAPISESSION session, Integer ID, String newName) :\n\tInteger
+UAPI.RightsList(UAPISESSION session, Integer theType, String name,\n\t[Integer proxyType = UAPI.PROXY_NONE]) : RecArray
+UAPI.RightsListByID(UAPISESSION session, Integer ID, [Integer\n\tproxyType = UAPI.PROXY_NONE]) : RecArray
+UAPI.SetLeader(UAPISESSION session, Integer theType, String name,\n\tInteger ID) : Integer
+UAPI.SetLeaderByID(UAPISESSION session, Integer groupID, Integer ID)\n\t: Integer
+UAPI.SetOwner(UAPISESSION session, Integer theType, String name,\n\tInteger ownerID) : Integer
+UAPI.SetOwnerByID(UAPISESSION session, Integer ID, Integer ownerID)\n\t: Integer
+UAPI.SetPWDExpireDateByID(UAPISESSION session, Integer userID, Date\n\texpirationDate) : Integer
+UAPI.SetPWDExpireModeByID(UAPISESSION session, Integer userID,\n\tDynamic mode) : Integer
+UAPI.SetUserData(UAPISESSION session, Integer theType, String name,\n\tDynamic userData) : Integer
+UAPI.SetUserDataByID(UAPISESSION session, Integer ID, Dynamic\n\tuserData) : Integer
+UAPI.SetUserDefaultGroup(UAPISESSION session, String userName,\n\tInteger groupType, String groupName) : Integer
+UAPI.SetUserDefaultGroupByIDs(UAPISESSION session, Integer userID,\n\tInteger groupID) : Integer
+UAPI.SetUserLanguage(CAPILOGIN login, String languageCode, :\n\tInteger
+UAPI.SetUserPassword(UAPISESSION session, String userName, Dynamic\n\tcurPwd, String arg4) : Integer
+UAPI.SetUserPasswordByID(UAPISESSION session, Integer userID,\n\tDynamic curPwd, String arg4) : Integer
+UAPI.SetUserPrivileges(UAPISESSION session, String userName, Integer\n\tprivileges) : Integer
+UAPI.SetUserPrivilegesByID(UAPISESSION session, Integer userID,\n\tInteger privileges) : Integer
+UAPI.UserList(UAPISESSION session, [Integer spaceID = 0], [Integer\n\tbrevity = 0]) : RecArray
+WAPI.AUDIT_SUBWORKDONE (Integer)
+WAPI.AUDIT_SUBWORKSTARTED (Integer)
+WAPI.AUDIT_SUBWORKUPDATED (Integer)
+WAPI.AUDIT_TASKACCEPTED (Integer)
+WAPI.AUDIT_TASKBKGNSENDON (Integer)
+WAPI.AUDIT_TASKBKGNSTARTED (Integer)
+WAPI.AUDIT_TASKCANCELLED (Integer)
+WAPI.AUDIT_TASKDONE (Integer)
+WAPI.AUDIT_TASKEXECUTING (Integer)
+WAPI.AUDIT_TASKFINISHED (Integer)
+WAPI.AUDIT_TASKKILLED (Integer)
+WAPI.AUDIT_TASKREADY (Integer)
+WAPI.AUDIT_TASKREASSIGNED (Integer)
+WAPI.AUDIT_TASKRESUMED (Integer)
+WAPI.AUDIT_TASKRESURRECTED (Integer)
+WAPI.AUDIT_TASKSTARTED (Integer)
+WAPI.AUDIT_TASKSUSPENDED (Integer)
+WAPI.AUDIT_USERDATA (Integer)
+WAPI.AUDIT_WORKARCHIVED (Integer)
+WAPI.AUDIT_WORKDONE (Integer)
+WAPI.AUDIT_WORKRESUMED (Integer)
+WAPI.AUDIT_WORKSTARTED (Integer)
+WAPI.AUDIT_WORKSTOPPED (Integer)
+WAPI.AUDIT_WORKSUSPENDED (Integer)
+WAPI.FALSE (Integer)
+WAPI.LIST_IFINITIATED (Integer)
+WAPI.LIST_IFMANAGED (Integer)
+WAPI.LIST_IFPERFORMER (Integer)
+WAPI.LOOP (Integer)
+WAPI.MAP_FLAG_ARCHIVEONCOMPLETE (Integer)
+WAPI.MAP_FLAG_DELETEONCOMPLETE (Integer)
+WAPI.MAP_FLAG_EMAILATTACHMENTASFILE (Integer)
+WAPI.MAP_FLAG_EMAILATTACHMENTASLINK (Integer)
+WAPI.MAP_FLAG_RESUMEONRETURN (Integer)
+WAPI.MAP_FLAG_SKIPWEEKENDS (Integer)
+WAPI.MAP_FLAG_TEMPMAP (Integer)
+WAPI.MAPTASK_FALSELINKS (Integer)
+WAPI.MAPTASK_FLAG_AUTODONE (Integer)
+WAPI.MAPTASK_FLAG_BKGNSENDON (Integer)
+WAPI.MAPTASK_FLAG_EMAILENABLED (Integer)
+WAPI.MAPTASK_FLAG_MILESTONE (Integer)
+WAPI.MAPTASK_FLAG_RECALCULATE (Integer)
+WAPI.MAPTASK_LOOPLINKS (Integer)
+WAPI.MAPTASK_TRUELINKS (Integer)
+WAPI.STARTTASK_FLAG_NOAUDIT (Integer)
+WAPI.STARTTASK_FLAG_REEXECUTE (Integer)
+WAPI.SUBWORKTASK_CUSTOMDATA (Integer)
+WAPI.SUBWORKTASK_FLAGS (Integer)
+WAPI.SUBWORKTASK_FLAG_AUTODONE (Integer)
+WAPI.SUBWORKTASK_FLAG_BACKGROUND (Integer)
+WAPI.SUBWORKTASK_FLAG_BKGNSENDON (Integer)
+WAPI.SUBWORKTASK_FLAG_MILESTONE (Integer)
+WAPI.SUBWORKTASK_FLAG_RECALCULATE (Integer)
+WAPI.SUBWORKTASK_PERFORMERID (Integer)
+WAPI.SUBWORKTASK_STATUS_DELETED (Integer)
+WAPI.SUBWORKTASK_STATUS_DONE (Integer)
+WAPI.SUBWORKTASK_STATUS_EXECUTING (Integer)
+WAPI.SUBWORKTASK_STATUS_FINISHED (Integer)
+WAPI.SUBWORKTASK_STATUS_KILLED (Integer)
+WAPI.SUBWORKTASK_STATUS_READY (Integer)
+WAPI.SUBWORKTASK_STATUS_READY_BG (Integer)
+WAPI.SUBWORKTASK_STATUS_SENDINGON (Integer)
+WAPI.SUBWORKTASK_STATUS_STARTED (Integer)
+WAPI.SUBWORKTASK_STATUS_SUSPENDED (Integer)
+WAPI.SUBWORKTASK_STATUS_WAITING (Integer)
+WAPI.SUBWORKTASK_TITLE (Integer)
+WAPI.SUBWORKTASK_TYPE_MILESTONE (Integer)
+WAPI.SUBWORKTASK_TYPE_NORMAL (Integer)
+WAPI.SUBWORKTASK_USERCOMMENT (Integer)
+WAPI.SUBWORKTASK_USERDATA (Integer)
+WAPI.SUBWORKTASK_USERSTATUS (Integer)
+WAPI.SUBWORK_CUSTOMDATA (Integer)
+WAPI.SUBWORK_FLAGS (Integer)
+WAPI.SUBWORK_FLAG_ARCHIVEONCOMPLETE (Integer)
+WAPI.SUBWORK_FLAG_DELETEONCOMPLETE (Integer)
+WAPI.SUBWORK_FLAG_RESUMEONRETURN (Integer)
+WAPI.SUBWORK_FLAG_SKIPWEEKENDS (Integer)
+WAPI.SUBWORK_FLAG_TEMPMAP (Integer)
+WAPI.SUBWORK_PROJECT (Integer)
+WAPI.SUBWORK_STATUS_DONE (Integer)
+WAPI.SUBWORK_STATUS_EXECUTING (Integer)
+WAPI.SUBWORK_TITLE (Integer)
+WAPI.SUBWORK_USERDATA (Integer)
+WAPI.TRUE (Integer)
+WAPI.WORK_CUSTOMDATA (Integer)
+WAPI.WORK_FLAGS (Integer)
+WAPI.WORK_MANAGERID (Integer)
+WAPI.WORK_OWNERID (Integer)
+WAPI.WORK_PROJECT (Integer)
+WAPI.WORK_STATUS_ARCHIVED (Integer)
+WAPI.WORK_STATUS_DONE (Integer)
+WAPI.WORK_STATUS_EXECUTING (Integer)
+WAPI.WORK_STATUS_STOPPED (Integer)
+WAPI.WORK_STATUS_SUSPENDED (Integer)
+WAPI.WORK_TITLE (Integer)
+WAPI.WORK_USERDATA (Integer)
+WAPI.AcceptTask(WAPIWORK work, Integer workID, Integer subworkID,\n\tInteger taskID) : Integer
+WAPI.AccessWork(WAPIWORK work, Integer workID, [Integer subworkID])\n\t: Integer
+WAPI.AddTaskLink(WAPIMAPTASK fromtask, Integer linktype, WAPIMAPTASK\n\ttotask) : Integer
+WAPI.AddWorkData(WAPIWORK work, Integer type, Integer subtype,\n\t[String descripton], Dynamic value) : Integer
+WAPI.AllocMap(WAPISESSION session) : WAPIMAP
+WAPI.AllocMapTask(WAPIMAP map) : WAPIMAPTASK
+WAPI.AllocNthMapTask(WAPIMAP map, Integer taskID) : WAPIMAPTASK
+WAPI.AllocSession(CAPILOGIN login) : WAPISESSION
+WAPI.AllocSubWork(WAPIWORK work) : WAPISUBWORK
+WAPI.AllocWork(WAPISESSION session) : WAPIWORK
+WAPI.ArchiveWork(WAPIWORK work, Integer workID) : Integer
+WAPI.CallSubWork(WAPIWORK work) : Integer
+WAPI.ColumnStringToValue(WAPISESSION session, RecArray array, String\n\tcolName) : RecArray
+WAPI.DeleteMapByID(WAPISESSION session, Integer mapID) :\n\tInteger
+WAPI.DeleteMapTask(WAPIMAPTASK task) : Integer
+WAPI.DeleteTaskLink(WAPIMAPTASK fromTask, Integer linkType,\n\tWAPIMAPTASK toTask) : Integer
+WAPI.DeleteWork(WAPIWORK work, Integer workID) : Integer
+WAPI.DeleteWorkData(WAPIWORK work, Integer type, Integer subtype) :\n\tInteger
+WAPI.FreeMap(WAPIMAP map) : Integer
+WAPI.FreeMapTask(WAPIMAPTASK task) : Integer
+WAPI.FreeSession(WAPISESSION session) : Integer
+WAPI.FreeSubWork(WAPISUBWORK subWork) : Integer
+WAPI.FreeWork(WAPIWORK work) : Integer
+WAPI.GetTaskLinks(WAPIMAPTASK task, Integer linkType) : List
+WAPI.GetWorkData(WAPIWORK work, Integer type, Integer subtype) :\n\tDynamic
+WAPI.LLMapToWMap(WAPIMAP map, RecArray mapInfo, RecArray tasks,\n\tRecArray links) : Integer
+WAPI.ListWorkData(WAPIWORK work, [Boolean allWork) : RecArray
+WAPI.LoadMapByID(WAPIMAP map, Integer mapID) : Integer
+WAPI.LoadTaskStatus(WAPISESSION session, Integer workID, [Integer\n\tsubWorkID], [Integer taskID]) : RecArray
+WAPI.LoadWorkAudit(WAPISESSION session, Integer workID, [Integer\n\tsubWorkID], [Integer taskID]) : RecArray
+WAPI.LoadWorkStatus(WAPISESSION session, Integer workID, [Integer\n\tsubWorkID], [Integer taskID]) : List
+WAPI.PrepareMap(WAPIWORK work, WAPIMAP map, [Integer flags]) :\n\tInteger
+WAPI.PrepareSubMap(WAPIWORK work, WAPIMAP map, [Integer flags]) :\n\tInteger
+WAPI.PrepareSubWork(WAPIWORK work, Integer mapID, [Integer flags]) :\n\tInteger
+WAPI.PrepareWork(WAPIWORK work, Integer mapID, [Integer flags]) :\n\tInteger
+WAPI.ReassignTask(WAPIWORK work, Integer workID, Integer subWorkID,\n\tInteger taskID, Integer userID) : Integer
+WAPI.ReplaceMap(WAPIMAP map) : Integer
+WAPI.ResumeWork(WAPIWORK work, Integer workID) : Integer
+WAPI.SaveMap(WAPIMAP map) : Integer
+WAPI.SetCallback(WAPISESSION session, Dynamic feature, [Dynamic\n\tobject]) : Integer
+WAPI.SetWorkData(WAPIWORK work, Integer type, Integer subtype,\n\t[String description], Dynamic value) : Integer
+WAPI.StartTask(WAPIWORK work, Integer workID, Integer subWorkID,\n\tInteger taskID, Integer flags) : Integer
+WAPI.StartWork(WAPIWORK work, [String title]) : Integer
+WAPI.StopWork(WAPIWORK work, Integer workID) : Integer
+WAPI.SuspendWork(WAPIWORK work, Integer workID) : Integer
+WAPI.TaskAuditUserData(WAPIWORK work, Integer workID, Integer\n\tsubWorkID, Integer taskID, Dynamic data, [Integer iterNum]) :\n\tInteger
+WAPI.TaskCancel(WAPIWORK work) : Integer
+WAPI.TaskDone(WAPIWORK work, [Dynamic linkType]) : Integer
+WAPI.UpdateSubWorkAttribute(WAPIWORK work, Integer workID, Integer\n\tsubWorkID, Integer attribute, Dynamic value) : Integer
+WAPI.UpdateSubWorkPrepare(WAPIWORK work, WAPIMAP map, Integer\n\tworkID, Integer subWorkID) : Integer
+WAPI.UpdateSubWorkStart(WAPIWORK work) : Integer
+WAPI.UpdateTaskAttribute(WAPIWORK work, Integer workID, Integer\n\tsubWorkID, Integer taskID, Integer attribute, Dynamic value) :\n\tInteger
+WAPI.UpdateWorkAttribute(WAPIWORK work, Integer workID, Integer\n\tattribute, Dynamic value) : Integer
+WAPI.WorkList(WAPISESSION session, String viewName, Dynamic\n\twhereClause, Integer flags) : RecArray
+WAPI.WorkList2(WAPISESSION session, String viewName, Dynamic\n\twhereClause, Dynamic orderby, Integer flags) : RecArray
+Web.CRLF (String)
+Web.JS_ESCAPE (String)
+Web.JS_ENCODEURI (String)
+Web.JS_ENCODEURICOMPONENT (String)
+Web.CookieDecode(String cookie, String ipAddress, [Integer salt])\n\tdeprecated : String
+Web.CookieEncode(String cookie, String ipAddress, [Integer salt])\n\tdeprecated : String
+Web.DecodeForURL(String value) : String
+Web.EncodeForURL(String value) : String
+Web.Escape(String value) : String
+Web.EscapeForJS(String value, Integer mode) : String
+Web.EscapeJSON(String value) : String
+Web.EscapeHTML(String value) : String
+Web.EscapeXML(String value) : String
+Web.File(Dynamic context, String filePath, [String mimeType]) :\n\tBoolean
+Web.Format(String format, [List substitutions]) : String
+Web.FromJSON(String value) : Dynamic
+Web.ToJSON(Dynamic value) : String
+Web.Unescape(String value) : String
+Web.UnescapeJSON(String value) : String
+Web.Write(Dynamic context, Dynamic value, [List valueList]) :\n\tBoolean
+Web.WriteHeaders(Dynamic context, String status, String headers) :\n\tBoolean
+XSLProcessor.Guess (Integer)
+XSLProcessor.XML (Integer)
+XSLProcessor.Fragment (Integer)
+XSLProcessor.HTML (Integer)
+XSLProcessor.Text (Integer)
+XSLProcessor.Message (Integer)
+XSLProcessor.Warning (Integer)
+XSLProcessor.Error (Integer)
+XSLProcessor.FatalError (Integer)
+XSLProcessor.New() : XSLProcessor
+XSLProcessor.Transform() : Assoc
+XSLProcessor.SetInput(Dynamic xmlInput, [String relativeUrl]) : Boolean
+XSLProcessor.SetOutput(Dynamic xmlOutput, [Integer writeStyle]) :\n\tBoolean
+XSLProcessor.SetStylesheet(Dynamic xslInput, [String relativeUrl]) :\n\tBoolean
+XSLProcessor.SetParameter(String name, String value) : Void
+XSLProcessor.SetEntityResolver(Dynamic objref, Dynamic entryName) :\n\tVoid
+Zip.ERROR (Error)
+Zip.FILENOTFOUND (Error)
+Zip.NOTAFILE (Error)
+Zip.NOWRITEPERMISSION (Error)
+Zip.OK (Integer)
+Zip.Compress(String outFilename, String inFilename) : Integer
+Zip.Decompress(String outDirname, String inFilename) : Integer
